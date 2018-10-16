@@ -239,7 +239,7 @@ var organizations = [
 				var underTen = [];
 				var nAmerica = [];
 				var transportation = [];
-				var otherVariable = [];
+				var Variable = [];
 				for (var key of Object.keys(organizations)) {
 					 var tableKeys = organizations[key];
 					 if (tableKeys["Organization Type"] == "Nonprofit") {
@@ -257,16 +257,16 @@ var organizations = [
 					 }
 					 row2[0].innerHTML = "North America";
 					 row2[1].innerHTML = nAmerica.length;
-					if (tableKeys["Type of Data Used"].includes("Transportation")) {
+					if (tableKeys["Type of Data Used"]==("Transportation")) {
 						transportation.push(tableKeys["Type of Data Used"]);
 					 }
 					 row3[0].innerHTML = "Transport Data";
 					 row3[1].innerHTML = transportation.length;
 
-                    if (tableKeys["Type of Data Used"].includes("Other")) {
-                     otherVariable.push(tableKeys["Type of Data Used"]);}
-                     row4[0].innerHTML = "Other";
-                     row4[1].innerHTML = otherVariable.length;	 }
+                    if (tableKeys["Type of Data Used"]==("Other")) {
+                     Variable.push(tableKeys["Type of Data Used"]);}
+                     row4[0].innerHTML = "Variable";
+                     row4[1].innerHTML = Variable.length;	 }
 
 </script>
 
