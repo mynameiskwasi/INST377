@@ -235,7 +235,7 @@ var organizations = [
 				var row2 = document.getElementById("table").rows[2].cells;
 				var row3 = document.getElementById("table").rows[3].cells;
 				var row4 = document.getElementById("table").rows[4].cells;
-				var non_prof = [];
+				var noProfit = [];
 				var underTen = [];
 				var nAmerica = [];
 				var transportation = [];
@@ -243,14 +243,14 @@ var organizations = [
 				for (var key of Object.keys(organizations)) {
 					 var tableKeys = organizations[key];
 					 if (tableKeys["Organization Type"] == "Nonprofit") {
-						non_prof.push(tableKeys["Organization Type"]);
+						noProfit.push(tableKeys["Organization Type"]);
 					 }
-					 table[0].innerHTML = "Nonprofit Organizations";
-					 table[1].innerHTML = non_prof.length;
+					 table[0].innerHTML = "Nonprofit Orgs";
+					 table[1].innerHTML = noProfit.length;
 					 if (2018 - tableKeys["Founding Year"] < 10) {
 						underTen.push(tableKeys["Founding Year"]);
 					 }
-					 row1[0].innerHTML = "Young Organizations";
+					 row1[0].innerHTML = "Young Orgs";
 					 row1[1].innerHTML = underTen.length;
 					 if (tableKeys["Region"] == "North America") {
 						nAmerica.push(tableKeys["Region"]);
@@ -260,16 +260,14 @@ var organizations = [
 					if (tableKeys["Type of Data Used"].includes("Transportation")) {
 						transportation.push(tableKeys["Type of Data Used"]);
 					 }
-					 row3[0].innerHTML = "Transportation Data";
+					 row3[0].innerHTML = "Transport Data";
 					 row3[1].innerHTML = transportation.length;
 
                     if (tableKeys["Type of Data Used"].includes("Other")) {
-                     otherVariable.push(tableKeys["Type of Data Used"]);
-                     }
-                     row4[0].innerHTML = "Other Data";
-                     row4[1].innerHTML = otherVariable.length;
+                     otherVariable.push(tableKeys["Type of Data Used"]);}
+                     row4[0].innerHTML = "Other";
+                     row4[1].innerHTML = otherVariable.length;	 }
 
-				 }
 </script>
 
 </body>
